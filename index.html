@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar MP3/WAV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #1db954;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input {
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background: #1db954;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #17a74a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Descargar MP3 / WAV</h1>
+  <input type="text" id="url" placeholder="Pega aquí el enlace de YouTube">
+  <button onclick="descargar()">Descargar</button>
+
+  <script>
+    function descargar() {
+      const url = document.getElementById('url').value;
+      if (!url) return alert("Introduce un enlace válido");
+      // Aquí iría la conexión al backend
+      alert("Enlace enviado: " + url);
+    }
+  </script>
+</body>
+</html>
